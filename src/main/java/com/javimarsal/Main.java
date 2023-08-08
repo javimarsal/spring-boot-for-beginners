@@ -44,4 +44,10 @@ public class Main {
 
         customerRepository.save(customer);
     }
+
+    // path: api/v1/customers/1
+    @DeleteMapping("{customerId}")
+    public void deleteCustomer(@PathVariable("customerId") Integer id) {
+        customerRepository.deleteById(id);
+    }
 }
